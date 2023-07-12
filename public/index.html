@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parsing Control</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Welcome to Parser Control</h1>
+    <div id="script-controls">
+        <button id="startScript1" class="button">Start parsing UIK's ID's</button>
+        <button id="startScript2" class="button">Start parsing UIK's data</button>
+        <div id="encodingContainer2">
+            <label for="encoding2">Encoding:</label>
+            <select id="encoding2">
+                <option value="utf-8">UTF-8</option>
+                <option value="cp1251">Windows-1251</option>
+            </select>
+        </div>
+        <div id="threadCountContainer">
+            <label for="threadCountSlider">Number of threads:</label>
+            <input type="range" min="1" max="32" value="16" class="slider" id="threadCountSlider">
+            <div id="sliderContainer">
+                <span class="slider-value" id="threadCountDisplay"></span>
+            </div>
+            <div id="sliderValue">16</div>
+        </div>
+    </div>
+    <div class="progress-container">
+        <h2>ID's parsing progress</h2>
+        <div id="progress1" class="progress-bar">
+            <div class="progress"></div>
+            <div id="message1" class="message"></div>
+        </div>
+        <div class="time-container">
+            <div id="startTime1" class="start-time">
+                <div class="start-time-label">Start time</div>
+                <div id="startTimeValue1"></div>
+            </div>
+            <div id="timer1" class="timer">
+                <div class="timer-label">Timer</div>
+                <div id="timerValue1"></div>
+            </div>
+            <div id="endTime1" class="end-time">
+                <div class="end-time-label">Expected end time</div>
+                <div id="endTimeValue1"></div>
+            </div>
+        </div>
+    </div>
+    <div class="progress-container">
+        <h2>Data parsing progress</h2>
+        <div id="progress2" class="progress-bar">
+            <div class="progress"></div>
+            <div id="message2" class="message"></div>
+        </div>
+        <div class="time-container">
+            <div id="startTime2" class="start-time">
+                <div class="start-time-label">Start time</div>
+                <div id="startTimeValue2"></div>
+            </div>
+            <div id="timer2" class="timer">
+                <div class="timer-label">Timer</div>
+                <div id="timerValue2"></div>
+            </div>
+            <div id="endTime2" class="end-time">
+                <div class="end-time-label">Expected end time</div>
+                <div id="endTimeValue2"></div>
+            </div>
+        </div>
+    </div>
+    <div id="results"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

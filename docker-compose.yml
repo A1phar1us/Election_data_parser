@@ -1,0 +1,11 @@
+version: '3.5.2.2'
+services:
+  app:
+    build: .
+    image: parser-control
+    container_name: Parsing_Controller
+    ports:
+      - "3000"
+    volumes:
+      - ./Parsing_results:/usr/src/app/results
+
